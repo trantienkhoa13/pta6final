@@ -8,7 +8,7 @@ class Login(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("login.ui",self)
-        self.createAccount.clicked.connect(self.show_register)
+      #  self.createAccount.clicked.connect(self.show_register)
         self.btnlogin.clicked.connect(self.check_login)
         self.msg_box = QMessageBox()
 
@@ -40,7 +40,7 @@ class Register(QMainWindow):
 class Main(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("untitled.ui", self)
+        uic.loadUi("main.ui", self)
 
 if __name__ == "__main__" :
     app = QApplication(sys.argv)
