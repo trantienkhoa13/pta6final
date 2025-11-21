@@ -8,10 +8,10 @@ class Login(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("login.ui",self)
-      #  self.createAccount.clicked.connect(self.show_register)
-        self.btnlogin.clicked.connect(self.check_login)
-        self.msg_box = QMessageBox()
+        self.createAccount.clicked.connect(self.show_register)
+        self.login_button.clicked.connect(self.check_login)
 
+        self.msg_box = QMessageBox()
     def check_login (self):
         email = self.email.text()
         password = self.password.text ()

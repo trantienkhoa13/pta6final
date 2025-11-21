@@ -25,35 +25,35 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="top10_button">
        <property name="text">
         <string>top 10</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="contest_button">
        <property name="text">
         <string>contest</string>
        </property>
       </widget>
      </item>
      <item row="0" column="3">
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="friend_button">
        <property name="text">
         <string>friend</string>
        </property>
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="history_button">
        <property name="text">
         <string>history</string>
        </property>
       </widget>
      </item>
      <item row="0" column="4">
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="gym_button">
        <property name="text">
         <string>gym</string>
        </property>
@@ -61,20 +61,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>180</y>
-      <width>60</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="account_button">
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -87,7 +74,7 @@
      <string>account</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="point">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -111,21 +98,21 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="name1">
        <property name="text">
         <string>1 .khoadeptrai</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="name2">
        <property name="text">
         <string>2.randomguy</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="name3">
        <property name="text">
         <string>3. dontknowhowtocode</string>
        </property>
@@ -144,21 +131,21 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QLabel" name="label_8">
+      <widget class="QLabel" name="point1">
        <property name="text">
         <string>9000</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_9">
+      <widget class="QLabel" name="point2">
        <property name="text">
         <string>8999</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="point3">
        <property name="text">
         <string>7000</string>
        </property>
@@ -166,12 +153,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="top10">
     <property name="geometry">
      <rect>
       <x>190</x>
       <y>100</y>
-      <width>131</width>
+      <width>141</width>
       <height>91</height>
      </rect>
     </property>
@@ -179,7 +166,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:48pt;&quot;&gt;top 10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="rank">
     <property name="geometry">
      <rect>
       <x>60</x>

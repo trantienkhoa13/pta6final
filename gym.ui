@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>585</width>
     <height>600</height>
    </rect>
   </property>
@@ -14,20 +14,20 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="ta">
     <property name="geometry">
      <rect>
       <x>90</x>
       <y>150</y>
       <width>111</width>
-      <height>161</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../anh/ta-tay-cao-su-nam-viet-sport-avatar-247x296-removebg-preview.png</pixmap>
+     <pixmap>anh/ta-tay-cao-su-nam-viet-sport-avatar-247x296-removebg-preview.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -44,7 +44,7 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="veryeasy">
        <property name="autoFillBackground">
         <bool>false</bool>
        </property>
@@ -71,7 +71,7 @@ QPushButton:pressed {
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="easy">
        <property name="styleSheet">
         <string notr="true">QPushButton {
     background-color: #2ecc71;
@@ -95,7 +95,7 @@ QPushButton:pressed {
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="normal">
        <property name="styleSheet">
         <string notr="true">QPushButton {
     background-color: #f1c40f;
@@ -119,7 +119,7 @@ QPushButton:pressed {
       </widget>
      </item>
      <item row="1" column="2">
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="touraments">
        <property name="styleSheet">
         <string notr="true">QPushButton {
     background-color: #000000;
@@ -143,7 +143,7 @@ QPushButton:pressed {
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="hard">
        <property name="styleSheet">
         <string notr="true">QPushButton {
     background-color: #e74c3c;
@@ -167,7 +167,7 @@ QPushButton:pressed {
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="expert">
        <property name="styleSheet">
         <string notr="true">QPushButton {
     background-color: #8e44ad;
@@ -203,14 +203,14 @@ QPushButton:pressed {
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
      <item row="0" column="7">
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="friend_button">
        <property name="text">
         <string>friend</string>
        </property>
       </widget>
      </item>
      <item row="0" column="9">
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="gym_button">
        <property name="text">
         <string>gym</string>
        </property>
@@ -224,21 +224,21 @@ QPushButton:pressed {
       </widget>
      </item>
      <item row="0" column="6">
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="history_button">
        <property name="text">
         <string>history</string>
        </property>
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="top10_button">
        <property name="text">
         <string>top 10</string>
        </property>
       </widget>
      </item>
      <item row="0" column="4">
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="contest_button">
        <property name="text">
         <string>contest</string>
        </property>
@@ -246,7 +246,7 @@ QPushButton:pressed {
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_13">
+   <widget class="QPushButton" name="account_button">
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -265,7 +265,7 @@ QPushButton:pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>585</width>
      <height>18</height>
     </rect>
    </property>
