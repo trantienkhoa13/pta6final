@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication , QMainWindow , QMessageBox
+from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt6 import uic
 import sys
 import os
@@ -7,17 +7,25 @@ import os
 class Login(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("login.ui",self)
-        self.createAccount.clicked.connect(self.show_register)
+        uic.loadUi("login.ui", self)
+        self.signup_button.clicked.connect(self.show_register)
         self.login_button.clicked.connect(self.check_login)
-
         self.msg_box = QMessageBox()
-    def check_login (self):
-        email = self.email.text()
-        password = self.password.text ()
+    
+    def check_login(self):
+        email = self.email_input.text().strip()
+        password = self.password_input.text().strip()
+        
+        # Debug
+        print(f"Email: '{email}' | Password: '{password}'")
+        
         if email == "admin" and password == "admin":
-            main.show ()
-            self.close () 
+            print("Login successful!")
+            main.show()
+            self.close()
+        else:
+            print("Login failed!")
+            self.msg_box.warning(self, "Error", f"Invalid email or password!\nYou entered:\nEmail: '{email}'\nPassword: '{password}'")
             
     def show_register(self):
         register.show()
@@ -28,10 +36,22 @@ class Register(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("sign_in.ui", self)
-        self.btnRegister.clicked.connect(self.register_user)
-        self.loginAccount.clicked.connect(self.back_to_login)
+        self.signup_button.clicked.connect(self.register_user)
+        self.signin_button.clicked.connect(self.back_to_login)
         self.msg_box = QMessageBox()
-
+    
+    def register_user(self):
+        username = self.username_input.text().strip()
+        password = self.password_input.text().strip()
+        cfp = self.cfp_input.text().strip()
+        email = self.email_input.text().strip()
+        
+        if password == cfp and username and email:
+            self.msg_box.information(self, "Success", "Registration successful!")
+            self.back_to_login()
+        else:
+            self.msg_box.warning(self, "Error", "Please check your inputs!")
+    
     def back_to_login(self):
         login.show()
         self.close()
@@ -41,11 +61,203 @@ class Main(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("main.ui", self)
+        
+        self.account_button.clicked.connect(self.show_account)
+        self.contest_button.clicked.connect(self.show_contest)  # ADDED
+        self.top10_button.clicked.connect(self.show_top10)
+        self.friend_button.clicked.connect(self.show_friend)
+        self.gym_button.clicked.connect(self.show_gym)
+        
+    def show_account(self):
+        account.show()
+        self.close()
+    
+    def show_contest(self):  # ADDED
+        contest.show()
+        self.close()
+        
+    def show_top10(self):
+        top10.show()
+        self.close()
+        
+    def show_friend(self):
+        friend.show()
+        self.close()
+        
+    def show_gym(self):
+        gym.show()
+        self.close()
 
-if __name__ == "__main__" :
+
+class Account(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("account.ui", self)
+        
+        self.logout_button.clicked.connect(self.logout)
+        self.goout_button.clicked.connect(self.back_to_main)
+        
+    def logout(self):
+        login.show()
+        self.close()
+        
+    def back_to_main(self):
+        main.show()
+        self.close()
+
+
+class Contest(QMainWindow):  # ADDED NEW CLASS
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("contest.ui", self)  # You need to create contest.ui file
+        
+        # Connect navigation buttons if they exist in contest.ui
+        if hasattr(self, 'account_button'):
+            self.account_button.clicked.connect(self.show_account)
+        if hasattr(self, 'main_button'):
+            self.main_button.clicked.connect(self.show_main)
+        if hasattr(self, 'top10_button'):
+            self.top10_button.clicked.connect(self.show_top10)
+        if hasattr(self, 'friend_button'):
+            self.friend_button.clicked.connect(self.show_friend)
+        if hasattr(self, 'gym_button'):
+            self.gym_button.clicked.connect(self.show_gym)
+        if hasattr(self, 'history_button'):
+            self.history_button.clicked.connect(self.show_main)
+        
+    def show_account(self):
+        account.show()
+        self.close()
+        
+    def show_main(self):
+        main.show()
+        self.close()
+        
+    def show_top10(self):
+        top10.show()
+        self.close()
+        
+    def show_friend(self):
+        friend.show()
+        self.close()
+        
+    def show_gym(self):
+        gym.show()
+        self.close()
+
+
+class Top10(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("top10.ui", self)
+        
+        self.account_button.clicked.connect(self.show_account)
+        self.contest_button.clicked.connect(self.show_contest)  # UPDATED
+        self.history_button.clicked.connect(self.show_main)
+        self.friend_button.clicked.connect(self.show_friend)
+        self.gym_button.clicked.connect(self.show_gym)
+        
+    def show_account(self):
+        account.show()
+        self.close()
+    
+    def show_contest(self):  # ADDED
+        contest.show()
+        self.close()
+        
+    def show_main(self):
+        main.show()
+        self.close()
+        
+    def show_friend(self):
+        friend.show()
+        self.close()
+        
+    def show_gym(self):
+        gym.show()
+        self.close()
+
+
+class Friend(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("friend.ui", self)
+        
+        self.account_button.clicked.connect(self.show_account)
+        self.main_button.clicked.connect(self.show_main)
+        self.contest_button.clicked.connect(self.show_contest)  # UPDATED
+        self.top10_button.clicked.connect(self.show_top10)
+        self.history_button.clicked.connect(self.show_main)
+        self.gym_button.clicked.connect(self.show_gym)
+        
+    def show_account(self):
+        account.show()
+        self.close()
+    
+    def show_contest(self):  # ADDED
+        contest.show()
+        self.close()
+        
+    def show_main(self):
+        main.show()
+        self.close()
+        
+    def show_top10(self):
+        top10.show()
+        self.close()
+        
+    def show_gym(self):
+        gym.show()
+        self.close()
+
+
+class Gym(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("gym.ui", self)
+        
+        self.account_button.clicked.connect(self.show_account)
+        self.pushButton_9.clicked.connect(self.show_main)  
+        self.top10_button.clicked.connect(self.show_top10)
+        self.contest_button.clicked.connect(self.show_contest)  # UPDATED
+        self.history_button.clicked.connect(self.show_main)
+        self.friend_button.clicked.connect(self.show_friend)
+        
+    def show_account(self):
+        account.show()
+        self.close()
+    
+    def show_contest(self):  # ADDED
+        contest.show()
+        self.close()
+        
+    def show_main(self):
+        main.show()
+        self.close()
+        
+    def show_top10(self):
+        top10.show()
+        self.close()
+        
+    def show_friend(self):
+        friend.show()
+        self.close()
+
+
+if __name__ == "__main__":
     app = QApplication(sys.argv)
+    
+    global login, register, main, account, top10, friend, gym, contest
+    
     login = Login()
     register = Register()
     main = Main()
+    account = Account()
+    top10 = Top10()
+    friend = Friend()
+    gym = Gym()
+    contest = Contest()  # ADDED
+    
     login.show()
+    
     app.exec()
