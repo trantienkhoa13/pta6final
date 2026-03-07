@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>580</width>
-    <height>417</height>
+    <height>389</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,28 +17,28 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>30</x>
       <y>60</y>
       <width>501</width>
       <height>51</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
+     <item row="0" column="1">
       <widget class="QPushButton" name="top10_button">
        <property name="text">
         <string>top 10</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="contest_button">
+     <item row="0" column="3">
+      <widget class="QPushButton" name="history_button">
        <property name="text">
-        <string>contest</string>
+        <string>history</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="3">
+     <item row="0" column="5">
       <widget class="QPushButton" name="friend_button">
        <property name="text">
         <string>friend</string>
@@ -46,16 +46,23 @@
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="history_button">
+      <widget class="QPushButton" name="contest_button">
        <property name="text">
-        <string>history</string>
+        <string>contest</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="4">
+     <item row="0" column="6">
       <widget class="QPushButton" name="gym_button">
        <property name="text">
         <string>gym</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="history_button_2">
+       <property name="text">
+        <string>main</string>
        </property>
       </widget>
      </item>
@@ -72,19 +79,6 @@
     </property>
     <property name="text">
      <string>account</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="point">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>190</y>
-      <width>60</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>point</string>
     </property>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
@@ -156,8 +150,8 @@
    <widget class="QLabel" name="top10">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>100</y>
+      <x>210</x>
+      <y>110</y>
       <width>141</width>
       <height>91</height>
      </rect>
@@ -179,6 +173,19 @@
      <string>rank</string>
     </property>
    </widget>
+   <widget class="QLabel" name="point">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>180</y>
+      <width>158</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>point</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -186,7 +193,7 @@
      <x>0</x>
      <y>0</y>
      <width>580</width>
-     <height>18</height>
+     <height>29</height>
     </rect>
    </property>
   </widget>

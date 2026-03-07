@@ -7,31 +7,18 @@
     <x>0</x>
     <y>0</y>
     <width>511</width>
-    <height>572</height>
+    <height>486</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="page_name">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>361</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:64pt;&quot;&gt;Pekka.oj&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>90</y>
       <width>480</width>
       <height>100</height>
      </rect>
@@ -94,74 +81,65 @@
      <string>account</string>
     </property>
    </widget>
-   <widget class="QLabel" name="talkcloud">
+   <widget class="QLabel" name="history">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>220</y>
+      <x>180</x>
+      <y>180</y>
       <width>171</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>anh/tải xuống.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="aku">
-    <property name="geometry">
-     <rect>
-      <x>-10</x>
-      <y>290</y>
-      <width>181</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="pekka">
-    <property name="geometry">
-     <rect>
-      <x>-20</x>
-      <y>290</y>
-      <width>261</width>
-      <height>201</height>
+      <height>100</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>10</width>
-      <height>10</height>
+      <width>100</width>
+      <height>100</height>
      </size>
     </property>
     <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>anh/li6r743gez7f1.png</pixmap>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;HISTORY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="scaledContents">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="helloworld">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>250</y>
-      <width>161</width>
-      <height>41</height>
+      <x>380</x>
+      <y>260</y>
+      <width>60</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>HELLO WORLD!</string>
+     <string>date</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>260</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>elo</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>260</y>
+      <width>60</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>name</string>
     </property>
    </widget>
   </widget>

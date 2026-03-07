@@ -1,3 +1,4 @@
+import json
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt6 import uic
 import sys
@@ -16,7 +17,7 @@ class Login(QMainWindow):
         email = self.email_input.text().strip()
         password = self.password_input.text().strip()
         
-        # Debug
+        
         print(f"Email: '{email}' | Password: '{password}'")
         
         if email == "admin" and password == "admin":
@@ -63,16 +64,17 @@ class Main(QMainWindow):
         uic.loadUi("main.ui", self)
         
         self.account_button.clicked.connect(self.show_account)
-        self.contest_button.clicked.connect(self.show_contest)  # ADDED
+        self.contest_button.clicked.connect(self.show_contest)  
         self.top10_button.clicked.connect(self.show_top10)
         self.friend_button.clicked.connect(self.show_friend)
         self.gym_button.clicked.connect(self.show_gym)
+        self.history_button.clicked.connect(self.show_history)  
         
     def show_account(self):
         account.show()
         self.close()
     
-    def show_contest(self):  # ADDED
+    def show_contest(self):  
         contest.show()
         self.close()
         
@@ -86,6 +88,10 @@ class Main(QMainWindow):
         
     def show_gym(self):
         gym.show()
+        self.close()
+    
+    def show_history(self):  
+        history.show()
         self.close()
 
 
@@ -106,12 +112,10 @@ class Account(QMainWindow):
         self.close()
 
 
-class Contest(QMainWindow):  # ADDED NEW CLASS
+class Contest(QMainWindow):  
     def __init__(self):
         super().__init__()
-        uic.loadUi("contest.ui", self)  # You need to create contest.ui file
-        
-        # Connect navigation buttons if they exist in contest.ui
+        uic.loadUi("contest.ui", self)  
         if hasattr(self, 'account_button'):
             self.account_button.clicked.connect(self.show_account)
         if hasattr(self, 'main_button'):
@@ -123,7 +127,7 @@ class Contest(QMainWindow):  # ADDED NEW CLASS
         if hasattr(self, 'gym_button'):
             self.gym_button.clicked.connect(self.show_gym)
         if hasattr(self, 'history_button'):
-            self.history_button.clicked.connect(self.show_main)
+            self.history_button.clicked.connect(self.show_history) 
         
     def show_account(self):
         account.show()
@@ -144,6 +148,10 @@ class Contest(QMainWindow):  # ADDED NEW CLASS
     def show_gym(self):
         gym.show()
         self.close()
+    
+    def show_history(self): 
+        history.show()
+        self.close()
 
 
 class Top10(QMainWindow):
@@ -152,8 +160,8 @@ class Top10(QMainWindow):
         uic.loadUi("top10.ui", self)
         
         self.account_button.clicked.connect(self.show_account)
-        self.contest_button.clicked.connect(self.show_contest)  # UPDATED
-        self.history_button.clicked.connect(self.show_main)
+        self.contest_button.clicked.connect(self.show_contest)  
+        self.history_button.clicked.connect(self.show_history)  
         self.friend_button.clicked.connect(self.show_friend)
         self.gym_button.clicked.connect(self.show_gym)
         
@@ -161,7 +169,7 @@ class Top10(QMainWindow):
         account.show()
         self.close()
     
-    def show_contest(self):  # ADDED
+    def show_contest(self):  
         contest.show()
         self.close()
         
@@ -175,6 +183,10 @@ class Top10(QMainWindow):
         
     def show_gym(self):
         gym.show()
+        self.close()
+    
+    def show_history(self):  
+        history.show()
         self.close()
 
 
@@ -185,16 +197,16 @@ class Friend(QMainWindow):
         
         self.account_button.clicked.connect(self.show_account)
         self.main_button.clicked.connect(self.show_main)
-        self.contest_button.clicked.connect(self.show_contest)  # UPDATED
+        self.contest_button.clicked.connect(self.show_contest)  
         self.top10_button.clicked.connect(self.show_top10)
-        self.history_button.clicked.connect(self.show_main)
+        self.history_button.clicked.connect(self.show_history)  
         self.gym_button.clicked.connect(self.show_gym)
         
     def show_account(self):
         account.show()
         self.close()
     
-    def show_contest(self):  # ADDED
+    def show_contest(self):  
         contest.show()
         self.close()
         
@@ -208,6 +220,10 @@ class Friend(QMainWindow):
         
     def show_gym(self):
         gym.show()
+        self.close()
+    
+    def show_history(self):  
+        history.show()
         self.close()
 
 
@@ -219,15 +235,15 @@ class Gym(QMainWindow):
         self.account_button.clicked.connect(self.show_account)
         self.pushButton_9.clicked.connect(self.show_main)  
         self.top10_button.clicked.connect(self.show_top10)
-        self.contest_button.clicked.connect(self.show_contest)  # UPDATED
-        self.history_button.clicked.connect(self.show_main)
+        self.contest_button.clicked.connect(self.show_contest)  
+        self.history_button.clicked.connect(self.show_history)  
         self.friend_button.clicked.connect(self.show_friend)
         
     def show_account(self):
         account.show()
         self.close()
     
-    def show_contest(self):  # ADDED
+    def show_contest(self):   
         contest.show()
         self.close()
         
@@ -242,12 +258,89 @@ class Gym(QMainWindow):
     def show_friend(self):
         friend.show()
         self.close()
+    
+    def show_history(self):
+        history.show()
+        self.close()
 
+
+class History(QMainWindow): 
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("history.ui", self)
+        
+        self.account_button.clicked.connect(self.show_account)
+        self.main_button.clicked.connect(self.show_main)
+        self.contest_button.clicked.connect(self.show_contest)
+        self.top10_button.clicked.connect(self.show_top10)
+        self.friend_button.clicked.connect(self.show_friend)
+        self.gym_button.clicked.connect(self.show_gym)
+        
+    def show_account(self):
+        account.show()
+        self.close()
+    
+    def show_main(self):
+        main.show()
+        self.close()
+    
+    def show_contest(self):
+        contest.show()
+        self.close()
+    
+    def show_top10(self):
+        top10.show()
+        self.close()
+    
+    def show_friend(self):
+        friend.show()
+        self.close()
+    
+    def show_gym(self):
+        gym.show()
+        self.close()
+
+class contest_item ():
+    def __init__(self , id , name , date , rate = None , link= None, img = None):
+        self.id = id
+        self.name = name
+        self.date = date
+        self.rate = float (rate) if rate else 0
+        self.link = link
+        self.img = img 
+
+    def update (self , newdata : dict):
+        for attribute , value in newdata.items ():
+            if value :
+                setattr (self ,attribute , value)
+
+
+class contest_list ():
+    def __init__ (self):
+        self.contest_item_list = []
+
+    def load_data (self , file_path):
+        with open (file_path,"r", encoding= "utf-8")as f:
+            data = json.load (f)
+        for item in data :
+            contest = contest_item(
+                id= item.get("id"),
+                name=item.get("name"),
+                date=item.get("date"),
+                rate=item.get("rate"),
+                link=item.get("link"),
+                img=item.get("img")
+            )
+            self.contest_item_list.append(contest)
+
+
+
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     
-    global login, register, main, account, top10, friend, gym, contest
+    global login, register, main, account, top10, friend, gym, contest, history 
     
     login = Login()
     register = Register()
@@ -256,7 +349,8 @@ if __name__ == "__main__":
     top10 = Top10()
     friend = Friend()
     gym = Gym()
-    contest = Contest()  # ADDED
+    contest = Contest()
+    history = History()  
     
     login.show()
     

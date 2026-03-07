@@ -1,0 +1,114 @@
+{
+  "contests": [
+    {
+      "id": 1,
+      "name": "ICPC 2025 vòng Quốc Gia",
+      "difficulty": "national",
+      "date": "2025-09-11",
+      "participants": 1506,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Weekly Challenge #42",
+      "difficulty": "easy",
+      "start_date": "2024-01-22",
+      "end_date": "2024-01-29",
+      "participants": 89,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Algorithm Sprint",
+      "difficulty": "hard",
+      "start_date": "2024-02-01",
+      "end_date": "2024-02-07",
+      "participants": 234,
+      "status": "upcoming",
+      "problems": [
+        {
+          "id": "AS001",
+          "title": "Graph Traversal",
+          "difficulty": "medium",
+          "points": 250
+        },
+        {
+          "id": "AS002",
+          "title": "Tree Maximum Path",
+          "difficulty": "hard",
+          "points": 400
+        },
+        {
+          "id": "AS003",
+          "title": "Advanced DP",
+          "difficulty": "expert",
+          "points": 500
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Beginner's Battle",
+      "difficulty": "easy",
+      "start_date": "2024-01-18",
+      "end_date": "2024-01-25",
+      "participants": 312,
+      "status": "active",
+      "problems": [
+        {
+          "id": "BB001",
+          "title": "Array Sum",
+          "difficulty": "very_easy",
+          "points": 50
+        },
+        {
+          "id": "BB002",
+          "title": "Find Maximum",
+          "difficulty": "easy",
+          "points": 100
+        },
+        {
+          "id": "BB003",
+          "title": "String Matching",
+          "difficulty": "easy",
+          "points": 150
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Master Coder Tournament",
+      "difficulty": "expert",
+      "start_date": "2024-02-10",
+      "end_date": "2024-02-17",
+      "participants": 67,
+      "status": "upcoming",
+      "problems": [
+        {
+          "id": "MCT001",
+          "title": "Advanced Data Structures",
+          "difficulty": "hard",
+          "points": 350
+        },
+        {
+          "id": "MCT002",
+          "title": "Optimization Problem",
+          "difficulty": "expert",
+          "points": 500
+        },
+        {
+          "id": "MCT003",
+          "title": "Algorithm Design",
+          "difficulty": "expert",
+          "points": 600
+        },
+        {
+          "id": "MCT004",
+          "title": "Complex System Design",
+          "difficulty": "tournament",
+          "points": 800
+        }
+      ]
+    }
+  ]
+}
