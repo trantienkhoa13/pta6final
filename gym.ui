@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>578</width>
-    <height>327</height>
+    <height>383</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -266,7 +266,7 @@ QPushButton:pressed {
      <x>0</x>
      <y>0</y>
      <width>578</width>
-     <height>29</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
